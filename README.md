@@ -1,6 +1,10 @@
 # Spam-Report-Reviewer
 
-This script reviews all /r/spam reports by a given user. It checks for duplicates, checks to see if the reported user has been shadowbanned, and outputs a list of non-shadowbanned users.
+This project has two parts - a bot that runs under /u/Spam\_Report_reviewer, and a script that can run under your own username.
+
+It reviews all /r/spam reports by a given user. It checks for duplicates, checks to see if the reported user has been shadowbanned, and outputs a list of non-shadowbanned users.
+
+The script version will also delete your spam posts, and automatically message the admins.
 
 To run this, you will need to have Python 2.7+ and PRAW installed.  To install PRAW, you will need Pip.
 
