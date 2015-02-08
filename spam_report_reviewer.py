@@ -72,7 +72,7 @@ for thing in spamreports:
             else:
                 print ("not shadowbanned: /u/"+reporteduser)
                 nonbannedusers.append(reporteduser)
-                if delete_all==1 then:
+                if delete_all==1:
                     thing.delete()
                         
             alreadychecked.append(reporteduser)
