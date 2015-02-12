@@ -35,18 +35,21 @@ class bot(object):
             print ("checking messages")
 
         users_to_check = []
-        
-        for message in r.get_unread(limit=None):
 
-            message.mark_as_read()
+        #Prevent crashing on 503 Service Unavailable
+        try:
+            for message in r.get_unread(limit=None):
 
-            if message.author.name!="captainmeta4" and "spam" in message.subject.lower():
-                users_to_check.append(message.author.name)
-                print ("message from /u/"+message.author.name)
-            elif message.author.name=="captainmeta4" and "spam" in message.subject.lower():
-                users_to_check.append(re.search("[\w-]+",message.body).group(0))
-                print ("order from /u/captainmeta4 - check /u/"+message.body)
-                
+                message.mark_as_read()
+
+                if message.author.name!="captainmeta4" and "spam" in message.subject.lower():
+                    users_to_check.append(message.author.name)
+                    print ("message from /u/"+message.author.name)
+                elif message.author.name=="captainmeta4" and "spam" in message.subject.lower():
+                    users_to_check.append(re.search("[\w-]+",message.body).group(0))
+                    print ("order from /u/captainmeta4 - check /u/"+message.body)
+        except:
+            pass
 
         return users_to_check
 

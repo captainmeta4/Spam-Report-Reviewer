@@ -10,17 +10,17 @@ headers = {'User-Agent': agentstring}
 print ("log in to reddit")
 print ("")
 
-username = raw_input("reddit username: ")
+username = input("reddit username: ")
 
 try:
     #Note that the reddit password is never stored to a variable.
-    r.login(username, raw_input("reddit password: "))
+    r.login(username, input("reddit password: "))
     print ("")
     print ("login successful")
 except:
     print ("")
     print ("login failed. you must log in to use this script.")
-    raw_input("press enter to quit.")
+    input("press enter to quit.")
     quit()
 
 print ("")
@@ -41,7 +41,7 @@ invalidcount=0
 
 print("")
 print("delete failed reports in addition to successful ones?")
-if "yes" in raw_input("yes/no").lower():
+if "yes" in input("yes/no").lower():
     delete_all = 1
 else:
     delete_all = 0
@@ -90,7 +90,7 @@ for thing in spamreports:
 
     count+=1
 
-print ""
+print ("")
 
 #If there are nonbanned users...
 if len(nonbannedusers)!=0:
@@ -110,8 +110,8 @@ if len(nonbannedusers)!=0:
         message = message+"* /u/"+user+"\n"
 
     #Send message to user
-    r.send_message(searchuser,"Spam reports",message)
-    print ("message successfully sent to /u/"+searchuser+".")
+    r.send_message(username,"Spam reports",message)
+    print ("message successfully sent to /u/"+username+".")
 
     #send to admins
     r.send_message("/r/reddit.com","Spam reports",message)
