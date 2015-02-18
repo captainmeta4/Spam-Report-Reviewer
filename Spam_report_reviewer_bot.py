@@ -10,15 +10,7 @@ headers = {'User-Agent': agentstring}
 bot_user = "Spam_Report_Reviewer"
 bot_pass = "xxxxxxxxx"
 
-me_user = "captainmeta4"
-me_pass = "xxxxxxxxx"
-
 class bot(object):
-
-    def login_me(self):
-        print ("logging in as me...")
-        r.login(me_user, me_pass)
-        print ("...success")
 
     def login_bot(self):
         print ("logging in as bot...")
@@ -142,18 +134,15 @@ class bot(object):
                 print ("/u/"+searchuser+" has no non-banned /r/spam reports.")
                 r.send_message(searchuser,"Spam reports","You have no non-banned /r/spam reports.")
 
-    def run(self):
+    def run_cycle(self):
 
         print ("running cycle")
 
         users_to_check = self.check_messages()
 
         if len(users_to_check)>0:
-            self.login_me()
 
             self.run_reports(users_to_check)
-
-            self.login_bot()
         else:
             print ("no new messages")
 
@@ -161,6 +150,6 @@ spambot=bot()
 spambot.login_bot()
 
 while 1:
-    bot.run(spambot)
-    print ("Sleeping for 10 seconds")
-    time.sleep(10)
+    bot.run_cycle(spambot)
+    print ("Sleeping for 30 seconds")
+    time.sleep(30)
