@@ -9,7 +9,7 @@ r = praw.Reddit(user_agent=agentstring)
 headers = {'User-Agent': agentstring}
 
 bot_user = "Spam_Report_Reviewer"
-password = os.environ.get('password')
+bot_pass = os.environ.get('password')
 
 class bot(object):
 
