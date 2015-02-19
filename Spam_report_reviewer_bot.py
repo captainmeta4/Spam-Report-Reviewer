@@ -4,7 +4,7 @@ import re
 import time
 import os
 
-agentstring="/r/spam submission deleter version 1.0 by /u/captainmeta4"
+agentstring="/r/spam submission deleter version 2.0 by /u/captainmeta4"
 r = praw.Reddit(user_agent=agentstring)
 headers = {'User-Agent': agentstring}
 
