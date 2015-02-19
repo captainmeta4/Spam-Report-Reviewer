@@ -2,13 +2,14 @@ import praw
 import requests
 import re
 import time
+import os
 
 agentstring="/r/spam submission deleter version 1.0 by /u/captainmeta4"
 r = praw.Reddit(user_agent=agentstring)
 headers = {'User-Agent': agentstring}
 
 bot_user = "Spam_Report_Reviewer"
-bot_pass = "xxxxxxxxx"
+password = os.environ.get('password')
 
 class bot(object):
 
