@@ -80,6 +80,7 @@ for thing in spamreports:
         #If duplicate...   
         elif reporteduser in alreadychecked:
             print ("duplicate entry: /u/"+reporteduser)
+            thing.delete()
             dupcount+=1
 
 
@@ -128,4 +129,4 @@ else:
     
 print ("")
 
-raw_input("press enter to quit")
+input("press enter to quit")
