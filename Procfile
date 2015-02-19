@@ -1,1 +1,1 @@
-bot: python Spam_report-reviewer_bot.py
+bot: python Spam_report_reviewer_bot.py
