@@ -41,7 +41,7 @@ invalidcount=0
 
 print("")
 print("delete failed reports in addition to successful ones?")
-if "yes" in input("yes/no").lower():
+if "y" in input("yes/no ").lower():
     delete_all = 1
 else:
     delete_all = 0
