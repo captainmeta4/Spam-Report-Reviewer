@@ -117,10 +117,7 @@ if len(nonbannedusers)!=0:
     #send to admins
     r.send_message("/r/reddit.com","Spam reports",message)
     print ("message successfully sent to /r/reddit.com")
-        
-    #phone home
-    r.send_message("captainmeta4","Spam report reviewer script","I just messaged the admins about "+str(len(nonbannedusers))+" non-banned accounts.")
-        
+     
 #else (if there are no nonbanned users)
 else:
     print ("/u/"+searchuser+" has no non-banned /r/spam reports.")
