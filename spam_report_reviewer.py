@@ -115,8 +115,8 @@ if len(nonbannedusers)!=0:
     print ("message successfully sent to /u/"+username+".")
 
     #send to admins
-    r.send_message("/r/reddit.com","Spam reports",message)
-    print ("message successfully sent to /r/reddit.com")
+    r.send_message("/r/spam","Spam reports",message)
+    print ("message successfully sent to /r/spam")
      
 #else (if there are no nonbanned users)
 else:
