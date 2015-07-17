@@ -118,7 +118,7 @@ class bot(object):
 
                 #If not on your own profile (so no auto admin message), add instructions to send to admins
                 message += ("To send this list to the admins, click \"source\""
-                    " and copy/paste the list into a [new message to /r/reddit.com](http://www.reddit.com/message/compose?to=%2Fr%2Freddit.com)\n\n")
+                    " and copy/paste the list into a [new message to /r/spam](http://www.reddit.com/message/compose?to=%2Fr%2Fspam)\n\n")
 
                 for user in nonbannedusers:
                     message = message+"* /u/"+user+"\n"
